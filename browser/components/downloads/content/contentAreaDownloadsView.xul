@@ -35,7 +35,7 @@
 #endif
   </keyset>
 
-  <stack flex="1">
+  <stack id="downloadsStack">
     <richlistbox id="downloadsRichListBox"/>
     <description id="downloadsListEmptyDescription"
                  value="&downloadsListEmpty.label;"/>

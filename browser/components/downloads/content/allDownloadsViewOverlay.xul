@@ -39,6 +39,12 @@
   <script type="application/javascript"
           src="chrome://global/content/contentAreaUtils.js"/>
 
+  <stack flex="1"
+               id="downloadsStack"
+               ondragstart="this._placesView.onDragStart(event);"
+               ondragover="this._placesView.onDragOver(event);"
+               ondrop="this._placesView.onDrop(event);" />
+
   <richlistbox flex="1"
                seltype="multiple"
                id="downloadsRichListBox" context="downloadsContextMenu"
@@ -46,9 +52,6 @@
                onkeypress="return this._placesView.onKeyPress(event);"
                ondblclick="return this._placesView.onDoubleClick(event);"
                oncontextmenu="return this._placesView.onContextMenu(event);"
-               ondragstart="this._placesView.onDragStart(event);"
-               ondragover="this._placesView.onDragOver(event);"
-               ondrop="this._placesView.onDrop(event);"
                onfocus="goUpdateDownloadCommands();"
                onselect="this._placesView.onSelect();"
                onblur="goUpdateDownloadCommands();"/>
